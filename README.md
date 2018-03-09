@@ -1,7 +1,8 @@
 # fermatsFactor
 
 ## quick start
-
+- To clone repo: `git clone https://github.com/charleyburt/fermatsFactor`
+- `cd fermatsFactor`
 - From the command line, run the program `python FermatsFactor.py`
 - Enter 0 to factor a specific number
   - This will show you every step
