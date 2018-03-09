@@ -4,13 +4,7 @@
 import math
 from sympy import pretty_print as pp
 
-def getAll():
-    n = 1
-    while n < 1000000:
-        guess = math.ceil(math.sqrt(int(n)))
-        showThemAll(n,guess)
-        n = n + 2
-
+#-----------------------------------------------------
 
 def getValue():
     n = int(input("Enter odd integer you would like to factor. Press ENTER when finished: "))
@@ -27,11 +21,20 @@ def fermatsFactor(n,guess):
         guess = guess + 1
         perfect = (int(guess)**2) - int(n)
         sqrt_perfect = math.sqrt(perfect)
-        
+
     print('%d^2 - %d = %d' %(guess,n,perfect))
     print('\n %d = %d^2 - %d^2' %(n,guess,sqrt_perfect))
     print('\n %d = (%d+%d)(%d-%d)'%(n,guess,sqrt_perfect,guess,sqrt_perfect))
 
+
+
+#-----------------------------------------------------
+def getAll():
+    n = 1
+    while n < 1000000:
+        guess = math.ceil(math.sqrt(int(n)))
+        showThemAll(n,guess)
+        n = n + 2
 
 def showThemAll(n=1,guess=1):
     perfect = (int(guess)**2) - int(n)
